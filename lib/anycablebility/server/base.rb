@@ -26,7 +26,8 @@ module Anycablebility
       protected
 
       def init_channels
-        # TODO:
+        require_relative "../app/application_cable/channel"
+        require_relative "../app/application_cable/connection"
       end
 
       def init_pubsub

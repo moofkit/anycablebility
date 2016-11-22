@@ -14,6 +14,11 @@ module Anycablebility
 
       protected
 
+      def init_channels
+        super
+        ::ActionCable.server.config.disable_request_forgery_protection = true
+      end
+
       def init_logger
         super
         ::ActionCable.server.config.logger = logger
