@@ -23,6 +23,10 @@ module Anycablebility
         super
         ::ActionCable.server.config.logger = logger
       end
+
+      def init_pubsub
+        ::ActionCable.config.cable = { adapter: "async" }.with_indifferent_access
+      end
     end
   end
 end

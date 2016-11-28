@@ -28,10 +28,11 @@ module Anycablebility
       def init_channels
         require_relative "../app/application_cable/channel"
         require_relative "../app/application_cable/connection"
+        require_relative "../app/echo_channel"
       end
 
       def init_pubsub
-        # TODO:
+        raise NotImplementedError
       end
 
       def init_logger

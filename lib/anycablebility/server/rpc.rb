@@ -18,6 +18,11 @@ module Anycablebility
         super
         Anycable.logger = logger
       end
+
+      def init_pubsub
+        redis_url = "redis://localhost:6379/5"
+        Anycable.config.redis_url = redis_url
+      end
     end
   end
 end
